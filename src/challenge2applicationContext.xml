@@ -9,37 +9,21 @@
 
 
 
-	<!-- Load the properties file: sports.properties -->
-	<context:property-placeholder location="classpath:sports.properties"/>
-    
-
-
-	<!-- Define your beans here -->
-
-
-	<!-- Define the dependency -->
+		<!-- Define the dependency -->
 	<bean id="myFortuneService"
-		class="section5.HappyFortuneService">
+		class="section5.Challenge2RandomFortune">
 	</bean>
 	
 	<bean id ="myCoach"
-		class="section5.LeagueCoach">
+		class="section5.Challenge2Coach">
 		
 		
 		<constructor-arg ref="myFortuneService" />
 		
 	</bean>
-	
-	<bean id ="myCricketCoach"
-		class="section5.CricketCoach">
-		
-		<!-- Set up setter injection -->
-		<property name="fortuneService" ref="myFortuneService" />
-		
-		<!-- inject literal values -->
-		<property name="emailAddress" value="${foo.email}" />
-		<property name="team" value="${foo.team}" />
-	</bean>
+    
+
+
 	
 
 </beans>

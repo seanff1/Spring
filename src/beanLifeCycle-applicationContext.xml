@@ -9,9 +9,6 @@
 
 
 
-	<!-- Load the properties file: sports.properties -->
-	<context:property-placeholder location="classpath:sports.properties"/>
-    
 
 
 	<!-- Define your beans here -->
@@ -23,23 +20,15 @@
 	</bean>
 	
 	<bean id ="myCoach"
-		class="section5.LeagueCoach">
-		
+		class="section6.TrackCoach"
+		init-method="startup"
+		destroy-method="destroyBean">
 		
 		<constructor-arg ref="myFortuneService" />
 		
 	</bean>
 	
-	<bean id ="myCricketCoach"
-		class="section5.CricketCoach">
-		
-		<!-- Set up setter injection -->
-		<property name="fortuneService" ref="myFortuneService" />
-		
-		<!-- inject literal values -->
-		<property name="emailAddress" value="${foo.email}" />
-		<property name="team" value="${foo.team}" />
-	</bean>
+
 	
 
 </beans>

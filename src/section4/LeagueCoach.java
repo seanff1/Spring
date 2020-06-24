@@ -6,5 +6,4 @@ public class LeagueCoach implements Coach {
 	public String getDailyWorkout() {
 		return "Spend 30 mins running it down mid";
 	}
-
 }

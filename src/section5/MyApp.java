@@ -1,4 +1,7 @@
-package section4;
+package section5;
+
+import section4.Coach;
+import section4.LeagueCoach;
 
 public class MyApp {
 	
@@ -8,9 +11,9 @@ public class MyApp {
 		//2) Use the object
 		
 		//1)Create
-		Coach theCoach = new LeagueCoach();
+		//Coach theCoach = new TrackCoach();
 		
 		//2) Use object
-		System.out.println(theCoach.getDailyWorkout());
+		//System.out.println(theCoach.getDailyWorkout());
 	}
 }
